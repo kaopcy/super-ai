@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  openai-app:
+    build: .
+    environment:
+      - GEMINI_API_KEY=AIzaSyDpng7Ln7Goj8t96o4DxW7XoF72uhbwNkw
+    env_file:
+      - .env
