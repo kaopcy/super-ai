@@ -1,15 +1,18 @@
-# Dockerfile
+# Use official Python image
 FROM python:3.11-slim
 
 # Set working directory
 WORKDIR /app
 
-# Install dependencies
+# Copy and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source code
-COPY . .
+# Copy your application
+COPY app/ app/
 
-# Default command
-CMD ["python", "main.py"]
+# Expose the Flask port
+EXPOSE 5000
+
+# Run the app
+CMD ["python", "app/app.py"]

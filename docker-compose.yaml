@@ -1,9 +1,13 @@
-version: "3.8"
+version: "3.9"
 
 services:
-  openai-app:
+  flask:
     build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app/app
     environment:
+      - FLASK_ENV=development
       - GEMINI_API_KEY=AIzaSyDpng7Ln7Goj8t96o4DxW7XoF72uhbwNkw
-    env_file:
-      - .env
+      - LINE_CHANNEL_ACCESS_TOKEN=m3Kw2lGKQay/V1OvhekHmVVkXYbpR8+BLWFenYTSP3CfbAAPUuvHJCghMU5ht2dlf4tgLFMC3tNiKZVsOSkU+P208hKXVpo5M4rLukPk486iLK2nCpeZkhnQMOzpywwzBMgeLEhD/Zc36XAWrzLDpgdB04t89/1O/w1cDnyilFU=

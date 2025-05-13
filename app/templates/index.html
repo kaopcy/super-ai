@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location Request</title>
+</head>
+<body>
+    <h1>Requesting your location...</h1>
+    <p id="status">Checking...</p>
+    <p id="location"></p>
+
+    <script>
+        const status = document.getElementById("status");
+        const locationPara = document.getElementById("location");
+        window.close();
+
+        // function success(position) {
+        //     const latitude = position.coords.latitude;
+        //     const longitude = position.coords.longitude;
+        //     status.textContent = "Location found!";
+        //     locationPara.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+
+        //     // Close after 2 seconds
+        //     setTimeout(() => {
+        //         window.close();
+        //     }, 2000);
+        // }
+
+        // function error(err) {
+        //     status.textContent = "Unable to retrieve your location.";
+        //     locationPara.textContent = err.message;
+        // }
+
+        // if (!navigator.geolocation) {
+        //     status.textContent = "Geolocation is not supported by your browser.";
+        // } else {
+        //     status.textContent = "Locating...";
+        //     navigator.geolocation.getCurrentPosition(success, error);
+        // }
+    </script>
+</body>
+</html>
